@@ -31,6 +31,8 @@ module.exports = (env, argv) => {
 
     plugins: [
       require('./webpack/plugins/css.extract.plugin')(mode),
+      require('./webpack/plugins/img.min.plugin')(mode),
+      require('./webpack/plugins/copy.plugin')(mode, config.assets),
       require('./webpack/plugins/html.plugin')(mode, {
         title: 'Document Title',
         filename: path.resolve(__dirname, 'dist', 'index.html'),

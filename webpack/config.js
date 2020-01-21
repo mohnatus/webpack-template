@@ -10,8 +10,15 @@ module.exports = (mode, root) => {
     },
 
     media: {
-      outputPath: 'assets',
+      outputPath: 'media',
       filename: '[name].[ext]',
     },
+
+    assets: [
+      {
+        from: path.resolve(root, 'src', 'assets'),
+        to: path.resolve(root, 'dist', 'assets'),
+      },
+    ],
   };
 };
