@@ -14,6 +14,7 @@ module.exports = (mode, config, options = {}) => {
     exclude: /(node_modules|bower_components)/,
     use: [
       require('../loaders/babel.loader')(mode, { plugins, presets }),
-    ].filter((loader) => loader),
+      require('../loaders/eslint.loader')(mode, options.lint),
+    ],
   };
 };
