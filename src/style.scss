@@ -1,0 +1,13 @@
+$color: green;
+body {
+  color:$color;
+}
+input::placeholder {
+  color:red;
+}
+.text {
+  position:relative;
+  left:20px;
+  border:1px solid red;
+  color:blue;
+}
