@@ -1,13 +1,16 @@
 $color: green;
 body {
-  color:$color;
+  color: $color;
+  background-image: url('./img/lol.gif'), url('./img/bears.png'),
+    url('./img/in-progress.png');
+  background-repeat: no-repeat;
 }
 input::placeholder {
-  color:red;
+  color: $color;
 }
 .text {
-  position:relative;
-  left:20px;
-  border:1px solid red;
-  color:blue;
+  position: relative;
+  left: 20px;
+  border: 1px solid $color;
+  color: $color;
 }

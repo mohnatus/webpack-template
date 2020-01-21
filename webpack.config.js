@@ -6,6 +6,10 @@ module.exports = (env, argv) => {
   const config = require('./webpack/config')(mode, __dirname);
 
   return {
+    entry: config.entry,
+
+    output: config.output,
+
     mode,
 
     devtool: mode === 'development' ? 'inline-source-map' : 'source-map',
@@ -17,9 +21,11 @@ module.exports = (env, argv) => {
 
     module: {
       rules: [
-        require('./webpack/presets/scss.preset')({ mode }),
-        require('./webpack/presets/es6.preset')({ mode }),
+        require('./webpack/presets/scss.preset')(mode),
+        require('./webpack/presets/es6.preset')(mode),
         //require('./webpack/presets/jsx.preset')({ mode }),
+        require('./webpack/presets/img.preset')(mode, config.media),
+        require('./webpack/presets/txt.preset')(mode),
       ],
     },
 
@@ -36,7 +42,5 @@ module.exports = (env, argv) => {
         errors: true,
       }),
     ],
-
-    ...config,
   };
 };

@@ -1,2 +1,4 @@
-var x = 42;
-console.log(x);
+import bears from './img/bears.png';
+console.log(bears);
+
+import './style.scss';
