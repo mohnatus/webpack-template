@@ -24,8 +24,21 @@ module.exports = (env, argv) => {
         require('./webpack/presets/scss.preset')(mode),
         require('./webpack/presets/es6.preset')(mode),
         //require('./webpack/presets/jsx.preset')({ mode }),
-        require('./webpack/presets/img.preset')(mode, config.media),
+        require('./webpack/presets/img.preset')(
+          mode,
+          {
+            exclude: config.inlineSvg.from,
+          },
+          config.media,
+        ),
         require('./webpack/presets/txt.preset')(mode),
+        require('./webpack/presets/svg.preset')(
+          mode,
+          {
+            include: config.inlineSvg.from,
+          },
+          config.inlineSvg.options,
+        ),
       ],
     },
 

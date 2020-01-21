@@ -7,7 +7,7 @@
  * Transforms files into base64 URIs
  */
 
-module.exports = (mode, options = {}) => {
+module.exports = (mode, config, options = {}) => {
   return {
     test: /\.txt$/i,
     use: [require('../loaders/raw.loader')(mode)],

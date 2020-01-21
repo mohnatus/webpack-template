@@ -5,7 +5,7 @@
  * babel-loader
  */
 
-module.exports = (mode, options = {}) => {
+module.exports = (mode, config, options = {}) => {
   const plugins = require('../babel/plugins')({ jsx: true });
   const presets = require('../babel/presets')({ jsx: true });
   return {

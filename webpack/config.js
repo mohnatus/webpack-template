@@ -9,16 +9,23 @@ module.exports = (mode, root) => {
       filename: '[name].js',
     },
 
+    // images && video
     media: {
       outputPath: 'media',
       filename: '[name].[ext]',
     },
 
+    // assets to copy
     assets: [
       {
         from: path.resolve(root, 'src', 'assets'),
         to: path.resolve(root, 'dist', 'assets'),
       },
     ],
+
+    inlineSvg: {
+      from: path.resolve(root, 'src', 'icons'),
+      options: {},
+    },
   };
 };

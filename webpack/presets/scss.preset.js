@@ -19,20 +19,21 @@
  * Extracts CSS into separate files
  */
 
-module.exports = (mode, config = {}) => {
+module.exports = (mode, config, options = {}) => {
   return {
     test: /\.s?css$/,
     use: [
-      config.mode === 'production'
+      mode === 'production'
         ? require('../loaders/css.extract.loader')
-        : require('../loaders/style.loader')(mode),
+        : require('../loaders/style.loader')(mode, options),
       require('../loaders/css.loader')(mode, {
         importLoaders: 2,
+        ...options,
       }),
-      config.mode === 'production'
-        ? require('../loaders/postcss.loader')(mode)
+      mode === 'production'
+        ? require('../loaders/postcss.loader')(mode, options)
         : null,
-      require('../loaders/sass.loader')(mode),
+      require('../loaders/sass.loader')(mode, options),
     ].filter((loader) => loader),
   };
 };
