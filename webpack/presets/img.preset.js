@@ -16,6 +16,6 @@ module.exports = (mode, config, options = {}) => {
         limit: 8192,
         ...options,
       }),
-    ].filter((loader) => loader),
+    ],
   };
 };

@@ -2,6 +2,10 @@ const path = require('path');
 
 module.exports = (mode, root) => {
   return {
+    rules: {
+      'jsx': false
+    },
+
     entry: path.resolve(root, 'src', 'index.js'),
 
     output: {
@@ -26,6 +30,12 @@ module.exports = (mode, root) => {
     inlineSvg: {
       from: path.resolve(root, 'src', 'icons'),
       options: {},
+    },
+
+    html: {
+      template: path.resolve(root, 'src', 'index.pug'),
+      filename: 'home.html',
+      inject: true,
     },
   };
 };
