@@ -41,6 +41,7 @@ module.exports = (env, argv) => {
     },
 
     plugins: [
+      require('./webpack/plugins/clean.plugin')(mode),
       require('./webpack/plugins/css.extract.plugin')(mode),
       require('./webpack/plugins/img.min.plugin')(mode),
       require('./webpack/plugins/copy.plugin')(mode, config.assets),
