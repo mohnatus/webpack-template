@@ -23,7 +23,6 @@ module.exports = (root) => {
     html: {
       options: {
         template: path.resolve(root, 'src', 'index.pug'),
-        filename: 'index.html',
       },
     },
   };

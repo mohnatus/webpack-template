@@ -1,13 +1,18 @@
 $color: green;
+
 body {
-  color: $color;
-  background-image: url('./img/lol.gif'), url('./img/bears.png'),
+  background-image:
+    url('./img/lol.gif'),
+    url('./img/bears.png'),
     url('./img/in-progress.png');
   background-repeat: no-repeat;
+  color: $color;
 }
+
 input::placeholder {
   color: $color;
 }
+
 .text {
   position: relative;
   left: 20px;
