@@ -20,6 +20,8 @@ module.exports = {
     port: 9000,
   },
 
+  optimization: PRODUCTION ? require('./webpack/config/optimization')() : {},
+
   module: {
     rules: [
       // scss
@@ -61,6 +63,9 @@ module.exports = {
       ? require('./webpack/plugins/img.min.plugin')(plugins.imgMin)
       : null,
     require('./webpack/plugins/copy.plugin')(plugins.copy),
-    require('./webpack/plugins/html.plugin')(plugins.html),
+    ...plugins.html.map(options => {
+      return require('./webpack/plugins/html.plugin')(options);
+    }),
+
   ].filter(Boolean),
 };

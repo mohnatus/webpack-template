@@ -6,7 +6,7 @@ module.exports = (root) => {
       options: {},
     },
     styleLint: {
-      options: {}
+      options: {},
     },
     cssExtract: {
       options: {},
@@ -23,10 +23,21 @@ module.exports = (root) => {
       ],
       options: {},
     },
-    html: {
-      options: {
-        template: path.resolve(root, 'src', 'index.pug'),
+    html: [
+      {
+        options: {
+          template: path.resolve(root, 'src', 'index.pug'),
+          chunks: ['home'],
+          filename: 'home.html',
+        },
       },
-    },
+      {
+        options: {
+          template: path.resolve(root, 'src', 'about.pug'),
+          chunks: ['about'],
+          filename: 'about.html',
+        },
+      },
+    ],
   };
 };

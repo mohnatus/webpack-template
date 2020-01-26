@@ -32,9 +32,9 @@ const path = require('path');
 
 module.exports = (root) => {
   return {
-    publicPath: '/',
+    publicPath:  process.env.NODE_ENV === 'production' ? './' : '/',
     path: path.resolve(root, 'dist'),
     filename: '[name].js',
-    chunkFilename: '[id].js'
+
   };
 };
