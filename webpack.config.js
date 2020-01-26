@@ -9,6 +9,10 @@ const options = require('./webpack/config/options')();
 const plugins = require('./webpack/config/plugins')(__dirname);
 
 module.exports = {
+  resolve: {
+    extensions: ['.js', '.json', '.jsx', '.css', '.scss'],
+  },
+
   mode,
   devtool: PRODUCTION ? 'source-map' : 'inline-source-map',
 
@@ -54,8 +58,9 @@ module.exports = {
     //   'process.env.NODE_ENV': JSON.stringify(mode === 'production'),
     // }),
     require('./webpack/plugins/clean.plugin')(plugins.clean),
-    PRODUCTION ? require('./webpack/plugins/stylelint.plugin')(plugins.styleLint)
-    : null,
+    PRODUCTION
+      ? require('./webpack/plugins/stylelint.plugin')(plugins.styleLint)
+      : null,
     PRODUCTION
       ? require('./webpack/plugins/css.extract.plugin')(plugins.cssExtract)
       : null,
@@ -63,10 +68,9 @@ module.exports = {
       ? require('./webpack/plugins/img.min.plugin')(plugins.imgMin)
       : null,
     require('./webpack/plugins/copy.plugin')(plugins.copy),
-    ...plugins.html.map(options => {
+    ...plugins.html.map((options) => {
       return require('./webpack/plugins/html.plugin')(options);
     }),
-    require('./webpack/plugins/chunks.plugin')(plugins.chunks)
-
+    require('./webpack/plugins/chunks.plugin')(plugins.chunks),
   ].filter(Boolean),
 };
