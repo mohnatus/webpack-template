@@ -11,9 +11,6 @@
  * cssnano
  * https://github.com/ben-eb/cssnano
  *
- * stylelint
- * https://github.com/stylelint/stylelint
- *
  * postcss-preset-env
  * https://github.com/csstools/postcss-preset-env
  *
@@ -24,7 +21,6 @@
 
 module.exports = {
   plugins: [
-    require('autoprefixer'),
     require('cssnano')({
       preset: [
         'default',
@@ -35,8 +31,8 @@ module.exports = {
         },
       ],
     }),
+    require('autoprefixer'),
     require('css-mqpacker'),
     require('postcss-preset-env'),
-    require('stylelint'),
   ],
 };

@@ -5,6 +5,9 @@ module.exports = (root) => {
     clean: {
       options: {},
     },
+    styleLint: {
+      options: {}
+    },
     cssExtract: {
       options: {},
     },

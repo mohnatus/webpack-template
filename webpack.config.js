@@ -52,6 +52,8 @@ module.exports = {
     //   'process.env.NODE_ENV': JSON.stringify(mode === 'production'),
     // }),
     require('./webpack/plugins/clean.plugin')(plugins.clean),
+    PRODUCTION ? require('./webpack/plugins/stylelint.plugin')(plugins.styleLint)
+    : null,
     PRODUCTION
       ? require('./webpack/plugins/css.extract.plugin')(plugins.cssExtract)
       : null,

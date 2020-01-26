@@ -65,11 +65,12 @@ npm i -D clean-webpack-plugin copy-webpack-plugin cross-env webpack webpack-bund
 ### Плагины
 
 - `css.extract.plugin` в production mode
+- `stylelint.plugin` в production mode
 
 ### Пакеты
 
 ```
-npm i -D autoprefixer css-loader css-mqpacker cssnano mini-css-extract-plugin node-sass postcss-loader postcss-preset-env postcss-scss sass-loader style-loader stylelint stylelint-config-standard stylelint-order
+npm i -D autoprefixer css-loader css-mqpacker cssnano mini-css-extract-plugin node-sass postcss-loader postcss-preset-env postcss-scss sass-loader style-loader stylelint-config-prettier stylelint stylelint-order stylelint-webpack-plugin
 ```
 
 ### Конфигурация
