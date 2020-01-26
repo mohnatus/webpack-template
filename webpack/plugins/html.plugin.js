@@ -61,6 +61,6 @@
 
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = (mode, options = {}) => {
+module.exports = ({ options } = {}) => {
   return new HtmlWebpackPlugin(options);
 };

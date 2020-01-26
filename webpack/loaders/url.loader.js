@@ -19,7 +19,7 @@
  * By default, file-loader generates JS modules that use the ES modules syntax
  */
 
-module.exports = (mode, options) => {
+module.exports = (options) => {
   return {
     loader: 'url-loader',
     options,

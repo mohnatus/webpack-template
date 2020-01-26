@@ -31,7 +31,7 @@
  * Adds a prefix to ids to avoid collision across svg files
  */
 
-module.exports = (mode, options) => {
+module.exports = (options) => {
   return {
     loader: 'svg-inline-loader',
     options,

@@ -7,10 +7,10 @@
  * Inlines SVG as module
  */
 
-module.exports = (mode, config, options = {}) => {
+module.exports = (config = {}, options = {}) => {
   return {
     test: /\.svg$/,
-    include: config.include,
-    use: [require('../loaders/svg.inline.loader')(mode, options)],
+    use: [require('../loaders/svg.inline.loader')(options.svg)],
+    ...config,
   };
 };

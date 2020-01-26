@@ -7,9 +7,8 @@
 
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
-module.exports = (mode, options = {}) => {
+module.exports = ({ options } = {}) => {
   return new ImageminPlugin({
-    disable: mode !== 'production',
     test: /\.(jpe?g|png|gif|svg)$/i,
     ...options,
   });

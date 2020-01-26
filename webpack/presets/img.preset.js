@@ -7,15 +7,15 @@
  * Transforms files into base64 URIs
  */
 
-module.exports = (mode, config, options = {}) => {
+module.exports = (config = {}, options = {}) => {
   return {
     test: /\.(png|jpe?g|gif|svg|ico)$/i,
-    exclude: config.exclude,
     use: [
-      require('../loaders/url.loader')(mode, {
+      require('../loaders/url.loader')({
         limit: 8192,
-        ...options,
+        ...options.url,
       }),
     ],
+    ...config,
   };
 };

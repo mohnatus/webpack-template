@@ -7,6 +7,6 @@
 
 const CopyPlugin = require('copy-webpack-plugin');
 
-module.exports = (mode, patterns, options) => {
+module.exports = ({ patterns, options } = {}) => {
   return new CopyPlugin(patterns, options);
 };

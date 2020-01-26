@@ -6,9 +6,10 @@
  * pug-loader
  */
 
-module.exports = (mode, config, options = {}) => {
+module.exports = (config = {}, options = {}) => {
   return {
     test: /\.pug$/i,
-    use: [require('../loaders/pug.loader')(mode, options)],
+    use: [require('../loaders/pug.loader')(options.pug)],
+    ...config,
   };
 };

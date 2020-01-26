@@ -4,6 +4,6 @@
  */
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-module.exports = (mode, config = {}) => {
-  return new CleanWebpackPlugin(config);
+module.exports = ({ options } = {}) => {
+  return new CleanWebpackPlugin(options);
 };

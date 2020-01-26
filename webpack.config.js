@@ -1,51 +1,62 @@
 const path = require('path');
 
-module.exports = (env, argv) => {
-  const mode = argv.mode || 'development';
+const mode = process.env.NODE_ENV || 'development';
+const PRODUCTION = mode === 'production';
 
-  const config = require('./webpack/config')(mode, __dirname);
+const rules = require('./webpack/config/rules')();
+const src = require('./webpack/config/src')(__dirname);
+const options = require('./webpack/config/options')();
+const plugins = require('./webpack/config/plugins')(__dirname);
 
-  return {
-    entry: config.entry,
+module.exports = {
+  mode,
+  devtool: PRODUCTION ? 'source-map' : 'inline-source-map',
 
-    output: config.output,
+  entry: require('./webpack/config/entries')(__dirname),
+  output: require('./webpack/config/output')(__dirname),
 
-    mode,
+  devServer: {
+    contentBase: path.resolve(__dirname, 'dist'),
+    port: 9000,
+  },
 
-    devtool: mode === 'development' ? 'inline-source-map' : 'source-map',
-
-    devServer: {
-      contentBase: path.resolve(__dirname, 'dist'),
-      port: 9000,
-    },
-
-    module: {
-      rules: [
-        require('./webpack/presets/scss.preset')(mode),
-        require('./webpack/presets/pug.preset')(mode),
-        config.rules.jsx
-          ? require('./webpack/presets/jsx.preset')(mode)
-          : require('./webpack/presets/es6.preset')(mode),
-        require('./webpack/presets/img.preset')(
-          mode,
-          { exclude: config.inlineSvg.from },
-          config.media,
-        ),
-        require('./webpack/presets/txt.preset')(mode),
-        require('./webpack/presets/svg.preset')(
-          mode,
-          { include: config.inlineSvg.from },
-          config.inlineSvg.options,
-        ),
-      ].filter((rule) => rule),
-    },
-
-    plugins: [
-      require('./webpack/plugins/clean.plugin')(mode),
-      require('./webpack/plugins/css.extract.plugin')(mode),
-      require('./webpack/plugins/img.min.plugin')(mode),
-      require('./webpack/plugins/copy.plugin')(mode, config.assets),
-      require('./webpack/plugins/html.plugin')(mode, config.html),
+  module: {
+    rules: [
+      // scss
+      PRODUCTION
+        ? require('./webpack/presets/scss.preset.production')(
+            src.css,
+            options.css,
+          )
+        : require('./webpack/presets/scss.preset.development')(
+            src.css,
+            options.css,
+          ),
+      // pug
+      require('./webpack/presets/pug.preset')(src.pug, options.pug),
+      // js
+      rules.jsx
+        ? require('./webpack/presets/jsx.preset')(src.js, options.js)
+        : require('./webpack/presets/es6.preset')(src.js, options.js),
+      // img
+      require('./webpack/presets/img.preset')(src.img, options.img),
+      // txt
+      require('./webpack/presets/txt.preset')(src.txt, options.txt),
+      // svg
+      require('./webpack/presets/svg.preset')(src.svg, options.svg),
     ],
-  };
+  },
+
+  plugins: [
+    // require('./webpack/plugins/define.plugin')({
+    //   'process.env.NODE_ENV': JSON.stringify(mode === 'production'),
+    // }),
+    require('./webpack/plugins/clean.plugin')(plugins.clean),
+    require('./webpack/plugins/css.extract.plugin')(plugins.cssExtract),
+    PRODUCTION
+      ? require('./webpack/plugins/img.min.plugin')(plugins.imgMin)
+      : null,
+    require('./webpack/plugins/copy.plugin')(plugins.copy),
+    require('./webpack/plugins/html.plugin')(plugins.html),
+  ].filter(Boolean),
 };

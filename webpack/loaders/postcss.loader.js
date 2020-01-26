@@ -28,7 +28,7 @@
  * Enable Source Maps
  */
 
-module.exports = (mode, options = {}) => {
+module.exports = (options = {}) => {
   return {
     loader: 'postcss-loader',
     options,

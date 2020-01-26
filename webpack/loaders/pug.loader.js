@@ -3,7 +3,7 @@
  * https://github.com/pugjs/pug-loader
  */
 
-module.exports = (mode, options = {}) => {
+module.exports = (options = {}) => {
   return {
     loader: 'pug-loader',
     options,

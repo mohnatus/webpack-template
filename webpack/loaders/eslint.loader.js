@@ -3,7 +3,7 @@
  * https://github.com/webpack-contrib/eslint-loader
  */
 
-module.exports = (mode, options = {}) => {
+module.exports = (options = {}) => {
   return {
     loader: 'eslint-loader',
     options: {

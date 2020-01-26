@@ -13,7 +13,7 @@
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = (mode, options = {}) => {
+module.exports = ({ options } = {}) => {
   return new MiniCssExtractPlugin({
     filename: '[name].css',
     chunkFilename: '[id].css',

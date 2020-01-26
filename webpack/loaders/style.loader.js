@@ -24,7 +24,7 @@
  * Use ES modules syntax
  */
 
-module.exports = (mode, options = {}) => ({
+module.exports = (options = {}) => ({
   loader: 'style-loader',
   options,
 });

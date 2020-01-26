@@ -31,7 +31,7 @@
  * Use ES modules syntax
  */
 
-module.exports = (mode, options = {}) => {
+module.exports = (options = {}) => {
   return {
     loader: 'css-loader',
     options,

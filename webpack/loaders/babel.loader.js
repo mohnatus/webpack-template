@@ -8,9 +8,9 @@
  * https://babeljs.io/docs/en/options
  */
 
-module.exports = (mode, options) => {
+module.exports = (options = {}) => {
   return {
     loader: 'babel-loader',
-    options: options,
+    options,
   };
 };

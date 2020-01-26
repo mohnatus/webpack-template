@@ -10,7 +10,7 @@
  * By default, raw-loader generates JS modules that use the ES modules syntax
  */
 
-module.exports = (mode, options = {}) => {
+module.exports = (options = {}) => {
   return {
     loader: 'raw-loader',
     options,

@@ -24,7 +24,7 @@
  * Enables/Disables the default Webpack importer
  */
 
-module.exports = (mode, options = {}) => {
+module.exports = (options = {}) => {
   return {
     loader: 'sass-loader',
     options,
