@@ -3,8 +3,8 @@
   "warnings": [],
   "version": "4.41.5",
   "hash": "909734402369e335386f",
-  "time": 2942,
-  "builtAt": 1580035143427,
+  "time": 3546,
+  "builtAt": 1580040957838,
   "publicPath": "",
   "outputPath": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\dist",
   "assetsByChunkName": {
@@ -115,8 +115,8 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\babel-loader\\lib\\index.js??ref--6-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\eslint-loader\\dist\\cjs.js??ref--6-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.js",
               "name": "./src/index.js",
               "profile": {
-                "factory": 51,
-                "building": 2138
+                "factory": 48,
+                "building": 2557
               }
             },
             {
@@ -124,14 +124,14 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\style-loader\\dist\\cjs.js??ref--4-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\css-loader\\dist\\cjs.js??ref--4-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\sass-loader\\dist\\cjs.js??ref--4-2!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\style.scss",
               "name": "./src/style.scss",
               "profile": {
-                "factory": 401,
-                "building": 237
+                "factory": 473,
+                "building": 310
               }
             }
           ],
           "profile": {
-            "factory": 329,
-            "building": 160,
+            "factory": 352,
+            "building": 280,
             "dependencies": 1
           },
           "failed": false,
@@ -177,8 +177,8 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\babel-loader\\lib\\index.js??ref--6-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\eslint-loader\\dist\\cjs.js??ref--6-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.js",
               "name": "./src/index.js",
               "profile": {
-                "factory": 51,
-                "building": 2138
+                "factory": 48,
+                "building": 2557
               }
             },
             {
@@ -186,8 +186,8 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\style-loader\\dist\\cjs.js??ref--4-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\css-loader\\dist\\cjs.js??ref--4-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\sass-loader\\dist\\cjs.js??ref--4-2!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\style.scss",
               "name": "./src/style.scss",
               "profile": {
-                "factory": 401,
-                "building": 237
+                "factory": 473,
+                "building": 310
               }
             },
             {
@@ -195,15 +195,15 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\css-loader\\dist\\cjs.js??ref--4-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\sass-loader\\dist\\cjs.js??ref--4-2!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\style.scss",
               "name": "./node_modules/css-loader/dist/cjs.js??ref--4-1!./node_modules/sass-loader/dist/cjs.js??ref--4-2!./src/style.scss",
               "profile": {
-                "factory": 329,
-                "building": 160,
+                "factory": 352,
+                "building": 280,
                 "dependencies": 1
               }
             }
           ],
           "profile": {
-            "factory": 73,
-            "building": 7
+            "factory": 148,
+            "building": 21
           },
           "failed": false,
           "errors": 0,
@@ -248,8 +248,8 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\babel-loader\\lib\\index.js??ref--6-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\eslint-loader\\dist\\cjs.js??ref--6-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.js",
               "name": "./src/index.js",
               "profile": {
-                "factory": 51,
-                "building": 2138
+                "factory": 48,
+                "building": 2557
               }
             },
             {
@@ -257,8 +257,8 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\style-loader\\dist\\cjs.js??ref--4-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\css-loader\\dist\\cjs.js??ref--4-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\sass-loader\\dist\\cjs.js??ref--4-2!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\style.scss",
               "name": "./src/style.scss",
               "profile": {
-                "factory": 401,
-                "building": 237
+                "factory": 473,
+                "building": 310
               }
             },
             {
@@ -266,15 +266,15 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\css-loader\\dist\\cjs.js??ref--4-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\sass-loader\\dist\\cjs.js??ref--4-2!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\style.scss",
               "name": "./node_modules/css-loader/dist/cjs.js??ref--4-1!./node_modules/sass-loader/dist/cjs.js??ref--4-2!./src/style.scss",
               "profile": {
-                "factory": 329,
-                "building": 160,
+                "factory": 352,
+                "building": 280,
                 "dependencies": 1
               }
             }
           ],
           "profile": {
-            "factory": 73,
-            "building": 7
+            "factory": 148,
+            "building": 21
           },
           "failed": false,
           "errors": 0,
@@ -319,8 +319,8 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\babel-loader\\lib\\index.js??ref--6-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\eslint-loader\\dist\\cjs.js??ref--6-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.js",
               "name": "./src/index.js",
               "profile": {
-                "factory": 51,
-                "building": 2138
+                "factory": 48,
+                "building": 2557
               }
             },
             {
@@ -328,14 +328,14 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\style-loader\\dist\\cjs.js??ref--4-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\css-loader\\dist\\cjs.js??ref--4-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\sass-loader\\dist\\cjs.js??ref--4-2!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\style.scss",
               "name": "./src/style.scss",
               "profile": {
-                "factory": 401,
-                "building": 237
+                "factory": 473,
+                "building": 310
               }
             }
           ],
           "profile": {
-            "factory": 329,
-            "building": 160,
+            "factory": 352,
+            "building": 280,
             "dependencies": 1
           },
           "failed": false,
@@ -381,14 +381,14 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\babel-loader\\lib\\index.js??ref--6-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\eslint-loader\\dist\\cjs.js??ref--6-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.js",
               "name": "./src/index.js",
               "profile": {
-                "factory": 51,
-                "building": 2138
+                "factory": 48,
+                "building": 2557
               }
             }
           ],
           "profile": {
-            "factory": 401,
-            "building": 237
+            "factory": 473,
+            "building": 310
           },
           "failed": false,
           "errors": 0,
@@ -442,14 +442,14 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\babel-loader\\lib\\index.js??ref--6-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\eslint-loader\\dist\\cjs.js??ref--6-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.js",
               "name": "./src/index.js",
               "profile": {
-                "factory": 51,
-                "building": 2138
+                "factory": 48,
+                "building": 2557
               }
             }
           ],
           "profile": {
-            "factory": 401,
-            "building": 237
+            "factory": 473,
+            "building": 310
           },
           "failed": false,
           "errors": 0,
@@ -516,14 +516,14 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\babel-loader\\lib\\index.js??ref--6-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\eslint-loader\\dist\\cjs.js??ref--6-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.js",
               "name": "./src/index.js",
               "profile": {
-                "factory": 51,
-                "building": 2138
+                "factory": 48,
+                "building": 2557
               }
             }
           ],
           "profile": {
-            "factory": 401,
-            "building": 237
+            "factory": 473,
+            "building": 310
           },
           "failed": false,
           "errors": 0,
@@ -579,8 +579,8 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\babel-loader\\lib\\index.js??ref--6-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\eslint-loader\\dist\\cjs.js??ref--6-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.js",
               "name": "./src/index.js",
               "profile": {
-                "factory": 51,
-                "building": 2138
+                "factory": 48,
+                "building": 2557
               }
             },
             {
@@ -588,8 +588,8 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\style-loader\\dist\\cjs.js??ref--4-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\css-loader\\dist\\cjs.js??ref--4-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\sass-loader\\dist\\cjs.js??ref--4-2!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\style.scss",
               "name": "./src/style.scss",
               "profile": {
-                "factory": 401,
-                "building": 237
+                "factory": 473,
+                "building": 310
               }
             },
             {
@@ -597,15 +597,15 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\css-loader\\dist\\cjs.js??ref--4-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\sass-loader\\dist\\cjs.js??ref--4-2!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\style.scss",
               "name": "./node_modules/css-loader/dist/cjs.js??ref--4-1!./node_modules/sass-loader/dist/cjs.js??ref--4-2!./src/style.scss",
               "profile": {
-                "factory": 329,
-                "building": 160,
+                "factory": 352,
+                "building": 280,
                 "dependencies": 1
               }
             }
           ],
           "profile": {
-            "factory": 73,
-            "building": 7
+            "factory": 148,
+            "building": 21
           },
           "failed": false,
           "errors": 0,
@@ -652,8 +652,8 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\babel-loader\\lib\\index.js??ref--6-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\eslint-loader\\dist\\cjs.js??ref--6-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.js",
               "name": "./src/index.js",
               "profile": {
-                "factory": 51,
-                "building": 2138
+                "factory": 48,
+                "building": 2557
               }
             },
             {
@@ -661,8 +661,8 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\style-loader\\dist\\cjs.js??ref--4-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\css-loader\\dist\\cjs.js??ref--4-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\sass-loader\\dist\\cjs.js??ref--4-2!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\style.scss",
               "name": "./src/style.scss",
               "profile": {
-                "factory": 401,
-                "building": 237
+                "factory": 473,
+                "building": 310
               }
             },
             {
@@ -670,15 +670,15 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\css-loader\\dist\\cjs.js??ref--4-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\sass-loader\\dist\\cjs.js??ref--4-2!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\style.scss",
               "name": "./node_modules/css-loader/dist/cjs.js??ref--4-1!./node_modules/sass-loader/dist/cjs.js??ref--4-2!./src/style.scss",
               "profile": {
-                "factory": 329,
-                "building": 160,
+                "factory": 352,
+                "building": 280,
                 "dependencies": 1
               }
             }
           ],
           "profile": {
-            "factory": 73,
-            "building": 7
+            "factory": 148,
+            "building": 21
           },
           "failed": false,
           "errors": 0,
@@ -721,8 +721,8 @@
           "issuerName": null,
           "issuerPath": null,
           "profile": {
-            "factory": 51,
-            "building": 2138
+            "factory": 48,
+            "building": 2557
           },
           "failed": false,
           "errors": 0,
@@ -767,14 +767,14 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\babel-loader\\lib\\index.js??ref--6-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\eslint-loader\\dist\\cjs.js??ref--6-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.js",
               "name": "./src/index.js",
               "profile": {
-                "factory": 51,
-                "building": 2138
+                "factory": 48,
+                "building": 2557
               }
             }
           ],
           "profile": {
-            "factory": 401,
-            "building": 237
+            "factory": 473,
+            "building": 310
           },
           "failed": false,
           "errors": 0,
@@ -834,8 +834,8 @@
           "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\babel-loader\\lib\\index.js??ref--6-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\eslint-loader\\dist\\cjs.js??ref--6-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.js",
           "name": "./src/index.js",
           "profile": {
-            "factory": 51,
-            "building": 2138
+            "factory": 48,
+            "building": 2557
           }
         },
         {
@@ -843,14 +843,14 @@
           "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\style-loader\\dist\\cjs.js??ref--4-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\css-loader\\dist\\cjs.js??ref--4-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\sass-loader\\dist\\cjs.js??ref--4-2!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\style.scss",
           "name": "./src/style.scss",
           "profile": {
-            "factory": 401,
-            "building": 237
+            "factory": 473,
+            "building": 310
           }
         }
       ],
       "profile": {
-        "factory": 329,
-        "building": 160,
+        "factory": 352,
+        "building": 280,
         "dependencies": 1
       },
       "failed": false,
@@ -896,8 +896,8 @@
           "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\babel-loader\\lib\\index.js??ref--6-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\eslint-loader\\dist\\cjs.js??ref--6-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.js",
           "name": "./src/index.js",
           "profile": {
-            "factory": 51,
-            "building": 2138
+            "factory": 48,
+            "building": 2557
           }
         },
         {
@@ -905,8 +905,8 @@
           "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\style-loader\\dist\\cjs.js??ref--4-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\css-loader\\dist\\cjs.js??ref--4-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\sass-loader\\dist\\cjs.js??ref--4-2!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\style.scss",
           "name": "./src/style.scss",
           "profile": {
-            "factory": 401,
-            "building": 237
+            "factory": 473,
+            "building": 310
           }
         },
         {
@@ -914,15 +914,15 @@
           "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\css-loader\\dist\\cjs.js??ref--4-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\sass-loader\\dist\\cjs.js??ref--4-2!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\style.scss",
           "name": "./node_modules/css-loader/dist/cjs.js??ref--4-1!./node_modules/sass-loader/dist/cjs.js??ref--4-2!./src/style.scss",
           "profile": {
-            "factory": 329,
-            "building": 160,
+            "factory": 352,
+            "building": 280,
             "dependencies": 1
           }
         }
       ],
       "profile": {
-        "factory": 73,
-        "building": 7
+        "factory": 148,
+        "building": 21
       },
       "failed": false,
       "errors": 0,
@@ -967,8 +967,8 @@
           "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\babel-loader\\lib\\index.js??ref--6-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\eslint-loader\\dist\\cjs.js??ref--6-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.js",
           "name": "./src/index.js",
           "profile": {
-            "factory": 51,
-            "building": 2138
+            "factory": 48,
+            "building": 2557
           }
         },
         {
@@ -976,8 +976,8 @@
           "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\style-loader\\dist\\cjs.js??ref--4-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\css-loader\\dist\\cjs.js??ref--4-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\sass-loader\\dist\\cjs.js??ref--4-2!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\style.scss",
           "name": "./src/style.scss",
           "profile": {
-            "factory": 401,
-            "building": 237
+            "factory": 473,
+            "building": 310
           }
         },
         {
@@ -985,15 +985,15 @@
           "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\css-loader\\dist\\cjs.js??ref--4-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\sass-loader\\dist\\cjs.js??ref--4-2!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\style.scss",
           "name": "./node_modules/css-loader/dist/cjs.js??ref--4-1!./node_modules/sass-loader/dist/cjs.js??ref--4-2!./src/style.scss",
           "profile": {
-            "factory": 329,
-            "building": 160,
+            "factory": 352,
+            "building": 280,
             "dependencies": 1
           }
         }
       ],
       "profile": {
-        "factory": 73,
-        "building": 7
+        "factory": 148,
+        "building": 21
       },
       "failed": false,
       "errors": 0,
@@ -1038,8 +1038,8 @@
           "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\babel-loader\\lib\\index.js??ref--6-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\eslint-loader\\dist\\cjs.js??ref--6-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.js",
           "name": "./src/index.js",
           "profile": {
-            "factory": 51,
-            "building": 2138
+            "factory": 48,
+            "building": 2557
           }
         },
         {
@@ -1047,14 +1047,14 @@
           "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\style-loader\\dist\\cjs.js??ref--4-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\css-loader\\dist\\cjs.js??ref--4-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\sass-loader\\dist\\cjs.js??ref--4-2!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\style.scss",
           "name": "./src/style.scss",
           "profile": {
-            "factory": 401,
-            "building": 237
+            "factory": 473,
+            "building": 310
           }
         }
       ],
       "profile": {
-        "factory": 329,
-        "building": 160,
+        "factory": 352,
+        "building": 280,
         "dependencies": 1
       },
       "failed": false,
@@ -1100,14 +1100,14 @@
           "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\babel-loader\\lib\\index.js??ref--6-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\eslint-loader\\dist\\cjs.js??ref--6-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.js",
           "name": "./src/index.js",
           "profile": {
-            "factory": 51,
-            "building": 2138
+            "factory": 48,
+            "building": 2557
           }
         }
       ],
       "profile": {
-        "factory": 401,
-        "building": 237
+        "factory": 473,
+        "building": 310
       },
       "failed": false,
       "errors": 0,
@@ -1161,14 +1161,14 @@
           "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\babel-loader\\lib\\index.js??ref--6-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\eslint-loader\\dist\\cjs.js??ref--6-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.js",
           "name": "./src/index.js",
           "profile": {
-            "factory": 51,
-            "building": 2138
+            "factory": 48,
+            "building": 2557
           }
         }
       ],
       "profile": {
-        "factory": 401,
-        "building": 237
+        "factory": 473,
+        "building": 310
       },
       "failed": false,
       "errors": 0,
@@ -1235,14 +1235,14 @@
           "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\babel-loader\\lib\\index.js??ref--6-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\eslint-loader\\dist\\cjs.js??ref--6-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.js",
           "name": "./src/index.js",
           "profile": {
-            "factory": 51,
-            "building": 2138
+            "factory": 48,
+            "building": 2557
           }
         }
       ],
       "profile": {
-        "factory": 401,
-        "building": 237
+        "factory": 473,
+        "building": 310
       },
       "failed": false,
       "errors": 0,
@@ -1298,8 +1298,8 @@
           "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\babel-loader\\lib\\index.js??ref--6-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\eslint-loader\\dist\\cjs.js??ref--6-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.js",
           "name": "./src/index.js",
           "profile": {
-            "factory": 51,
-            "building": 2138
+            "factory": 48,
+            "building": 2557
           }
         },
         {
@@ -1307,8 +1307,8 @@
           "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\style-loader\\dist\\cjs.js??ref--4-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\css-loader\\dist\\cjs.js??ref--4-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\sass-loader\\dist\\cjs.js??ref--4-2!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\style.scss",
           "name": "./src/style.scss",
           "profile": {
-            "factory": 401,
-            "building": 237
+            "factory": 473,
+            "building": 310
           }
         },
         {
@@ -1316,15 +1316,15 @@
           "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\css-loader\\dist\\cjs.js??ref--4-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\sass-loader\\dist\\cjs.js??ref--4-2!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\style.scss",
           "name": "./node_modules/css-loader/dist/cjs.js??ref--4-1!./node_modules/sass-loader/dist/cjs.js??ref--4-2!./src/style.scss",
           "profile": {
-            "factory": 329,
-            "building": 160,
+            "factory": 352,
+            "building": 280,
             "dependencies": 1
           }
         }
       ],
       "profile": {
-        "factory": 73,
-        "building": 7
+        "factory": 148,
+        "building": 21
       },
       "failed": false,
       "errors": 0,
@@ -1371,8 +1371,8 @@
           "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\babel-loader\\lib\\index.js??ref--6-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\eslint-loader\\dist\\cjs.js??ref--6-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.js",
           "name": "./src/index.js",
           "profile": {
-            "factory": 51,
-            "building": 2138
+            "factory": 48,
+            "building": 2557
           }
         },
         {
@@ -1380,8 +1380,8 @@
           "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\style-loader\\dist\\cjs.js??ref--4-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\css-loader\\dist\\cjs.js??ref--4-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\sass-loader\\dist\\cjs.js??ref--4-2!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\style.scss",
           "name": "./src/style.scss",
           "profile": {
-            "factory": 401,
-            "building": 237
+            "factory": 473,
+            "building": 310
           }
         },
         {
@@ -1389,15 +1389,15 @@
           "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\css-loader\\dist\\cjs.js??ref--4-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\sass-loader\\dist\\cjs.js??ref--4-2!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\style.scss",
           "name": "./node_modules/css-loader/dist/cjs.js??ref--4-1!./node_modules/sass-loader/dist/cjs.js??ref--4-2!./src/style.scss",
           "profile": {
-            "factory": 329,
-            "building": 160,
+            "factory": 352,
+            "building": 280,
             "dependencies": 1
           }
         }
       ],
       "profile": {
-        "factory": 73,
-        "building": 7
+        "factory": 148,
+        "building": 21
       },
       "failed": false,
       "errors": 0,
@@ -1440,8 +1440,8 @@
       "issuerName": null,
       "issuerPath": null,
       "profile": {
-        "factory": 51,
-        "building": 2138
+        "factory": 48,
+        "building": 2557
       },
       "failed": false,
       "errors": 0,
@@ -1486,14 +1486,14 @@
           "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\babel-loader\\lib\\index.js??ref--6-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\eslint-loader\\dist\\cjs.js??ref--6-1!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.js",
           "name": "./src/index.js",
           "profile": {
-            "factory": 51,
-            "building": 2138
+            "factory": 48,
+            "building": 2557
           }
         }
       ],
       "profile": {
-        "factory": 401,
-        "building": 237
+        "factory": 473,
+        "building": 310
       },
       "failed": false,
       "errors": 0,
@@ -1604,8 +1604,8 @@
               "issuerName": null,
               "issuerPath": null,
               "profile": {
-                "factory": 367,
-                "building": 1885
+                "factory": 417,
+                "building": 2255
               },
               "failed": false,
               "errors": 0,
@@ -1649,15 +1649,15 @@
                   "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\pug-loader\\index.js??ref--5-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.pug",
                   "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.pug",
                   "profile": {
-                    "factory": 367,
-                    "building": 1885
+                    "factory": 417,
+                    "building": 2255
                   }
                 }
               ],
               "profile": {
-                "factory": 14,
-                "building": 362,
-                "dependencies": 7
+                "factory": 571,
+                "building": 147,
+                "dependencies": 562
               },
               "failed": false,
               "errors": 0,
@@ -1711,15 +1711,15 @@
                   "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\pug-loader\\index.js??ref--5-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.pug",
                   "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.pug",
                   "profile": {
-                    "factory": 367,
-                    "building": 1885
+                    "factory": 417,
+                    "building": 2255
                   }
                 }
               ],
               "profile": {
-                "factory": 14,
-                "building": 362,
-                "dependencies": 7
+                "factory": 571,
+                "building": 147,
+                "dependencies": 562
               },
               "failed": false,
               "errors": 0,
@@ -1763,8 +1763,8 @@
                   "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\pug-loader\\index.js??ref--5-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.pug",
                   "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.pug",
                   "profile": {
-                    "factory": 367,
-                    "building": 1885
+                    "factory": 417,
+                    "building": 2255
                   }
                 },
                 {
@@ -1772,9 +1772,9 @@
                   "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\pug-runtime\\index.js",
                   "name": "./node_modules/pug-runtime/index.js",
                   "profile": {
-                    "factory": 14,
-                    "building": 362,
-                    "dependencies": 7
+                    "factory": 571,
+                    "building": 147,
+                    "dependencies": 562
                   }
                 }
               ],
@@ -1835,8 +1835,8 @@
           "issuerName": null,
           "issuerPath": null,
           "profile": {
-            "factory": 367,
-            "building": 1885
+            "factory": 417,
+            "building": 2255
           },
           "failed": false,
           "errors": 0,
@@ -1878,14 +1878,14 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\pug-loader\\index.js??ref--5-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.pug",
               "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.pug",
               "profile": {
-                "factory": 367,
-                "building": 1885
+                "factory": 417,
+                "building": 2255
               }
             }
           ],
           "profile": {
-            "factory": 7,
-            "building": 5
+            "factory": 5,
+            "building": 10
           },
           "failed": false,
           "errors": 0,
@@ -1930,15 +1930,15 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\pug-loader\\index.js??ref--5-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.pug",
               "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.pug",
               "profile": {
-                "factory": 367,
-                "building": 1885
+                "factory": 417,
+                "building": 2255
               }
             }
           ],
           "profile": {
-            "factory": 14,
-            "building": 362,
-            "dependencies": 7
+            "factory": 571,
+            "building": 147,
+            "dependencies": 562
           },
           "failed": false,
           "errors": 0,
@@ -1992,15 +1992,15 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\pug-loader\\index.js??ref--5-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.pug",
               "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.pug",
               "profile": {
-                "factory": 367,
-                "building": 1885
+                "factory": 417,
+                "building": 2255
               }
             }
           ],
           "profile": {
-            "factory": 14,
-            "building": 362,
-            "dependencies": 7
+            "factory": 571,
+            "building": 147,
+            "dependencies": 562
           },
           "failed": false,
           "errors": 0,
@@ -2044,8 +2044,8 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\pug-loader\\index.js??ref--5-0!C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\src\\index.pug",
               "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.pug",
               "profile": {
-                "factory": 367,
-                "building": 1885
+                "factory": 417,
+                "building": 2255
               }
             },
             {
@@ -2053,9 +2053,9 @@
               "identifier": "C:\\Users\\catinweb\\Documents\\XXX\\webpack-start\\node_modules\\pug-runtime\\index.js",
               "name": "./node_modules/pug-runtime/index.js",
               "profile": {
-                "factory": 14,
-                "building": 362,
-                "dependencies": 7
+                "factory": 571,
+                "building": 147,
+                "dependencies": 562
               }
             }
           ],

@@ -52,7 +52,9 @@ module.exports = {
     //   'process.env.NODE_ENV': JSON.stringify(mode === 'production'),
     // }),
     require('./webpack/plugins/clean.plugin')(plugins.clean),
-    require('./webpack/plugins/css.extract.plugin')(plugins.cssExtract),
+    PRODUCTION
+      ? require('./webpack/plugins/css.extract.plugin')(plugins.cssExtract)
+      : null,
     PRODUCTION
       ? require('./webpack/plugins/img.min.plugin')(plugins.imgMin)
       : null,
