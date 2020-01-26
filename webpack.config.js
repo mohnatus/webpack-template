@@ -66,6 +66,7 @@ module.exports = {
     ...plugins.html.map(options => {
       return require('./webpack/plugins/html.plugin')(options);
     }),
+    require('./webpack/plugins/chunks.plugin')(plugins.chunks)
 
   ].filter(Boolean),
 };

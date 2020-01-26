@@ -38,6 +38,21 @@ module.exports = (root) => {
           filename: 'about.html',
         },
       },
+      {
+        options: {
+          template: path.resolve(root, 'src', 'index.twig'),
+          filename: 'twig.html',
+        },
+      },
     ],
+    chunks: {
+      options: {
+        outputPath: path.resolve(root, `./assets`),
+        fileExtension: '.twig',
+        templateScript: `<script src="{{chunk}}"></script>`,
+        templateStyle: `<link rel="stylesheet" href="{{chunk}}" />`,
+        generateChunksManifest: true
+      }
+    }
   };
 };

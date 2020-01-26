@@ -1,5 +1,5 @@
 /**
- * Text loaders preset
+ * Twig loaders preset
  *
  * Use:
  *
@@ -9,7 +9,7 @@
 
 module.exports = (config = {}, options = {}) => {
   return {
-    test: /\.txt$/i,
+    test: /\.twig$/i,
     use: [require('../loaders/raw.loader')(options.raw)],
     ...config,
   };
