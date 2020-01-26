@@ -6,6 +6,8 @@
 // development mode
 npm run dev
 // watch mode
+npm run dev:w
+// server
 npm start
 
 // production mode

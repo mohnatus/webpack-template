@@ -10,10 +10,11 @@
     "stats": "webpack --profile --json > stats.json",
     "analyze": "npm run env:prod && npm run stats && webpack-bundle-analyzer stats.json",
     "prod": "npm run env:prod webpack",
-    "dev": "npm run env:prod webpack",
-    "dev:w": "npm run env:dev webpack-dev-server",
+    "dev": "npm run env:dev webpack",
+    "dev:w": "npm run env:dev webpack --watch",
+    "server": "npm run env:dev webpack-dev-server",
     "build": "npm run prod",
-    "start": "npm run dev:w"
+    "start": "npm run server"
   },
   "keywords": [],
   "author": "",
