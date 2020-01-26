@@ -30,10 +30,12 @@ module.exports = (config = {}) => {
   return [
     '@babel/plugin-proposal-class-properties',
     '@babel/plugin-proposal-export-namespace-from',
+    '@babel/plugin-syntax-export-default-from',
     '@babel/plugin-proposal-function-bind',
     '@babel/plugin-proposal-nullish-coalescing-operator',
     '@babel/plugin-proposal-numeric-separator',
     '@babel/plugin-proposal-optional-chaining',
+    '@babel/plugin-syntax-dynamic-import',
 
     [
       '@babel/plugin-transform-runtime',

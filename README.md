@@ -115,7 +115,7 @@ npm i -D html-webpack-plugin pug pug-loader
 ### Пакеты
 
 ```
-npm i -D @babel/core @babel/plugin-proposal-class-properties @babel/plugin-proposal-export-namespace-from @babel/plugin-proposal-function-bind @babel/plugin-proposal-nullish-coalescing-operator @babel/plugin-proposal-numeric-separator @babel/plugin-proposal-optional-chaining @babel/plugin-transform-runtime  @babel/preset-env @babel/preset-react babel-loader babel-eslint eslint eslint-loader
+npm i -D @babel/core @babel/plugin-proposal-class-properties @babel/plugin-proposal-export-namespace-from @babel/plugin-proposal-function-bind @babel/plugin-proposal-nullish-coalescing-operator @babel/plugin-proposal-numeric-separator @babel/plugin-proposal-optional-chaining @babel/plugin-syntax-export-default-from @babel/plugin-syntax-dynamic-import @babel/plugin-transform-runtime  @babel/preset-env @babel/preset-react babel-loader babel-eslint eslint eslint-loader
 
 npm i @babel/runtime
 ```
