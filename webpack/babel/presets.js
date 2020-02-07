@@ -1,3 +1,13 @@
 module.exports = (config = {}) => {
-  return [config.jsx ? '@babel/preset-react' : '@babel/preset-env'];
+  return [
+    [
+      '@babel/preset-env',
+      {
+        modules: false,
+        loose: true,
+        useBuiltIns: 'usage',
+      },
+    ],
+    config.jsx ? '@babel/preset-react' : null,
+  ].filter((p) => p);
 };
