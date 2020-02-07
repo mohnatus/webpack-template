@@ -6,7 +6,7 @@ function Header({ page }) {
     <header className="header">
       <h1>{page}</h1>
     </header>
-  )
+  );
 }
 
 export default Header;

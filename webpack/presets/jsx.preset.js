@@ -3,6 +3,7 @@
  *
  * Use:
  * babel-loader
+ * eslint-loader
  */
 
 module.exports = (config = {}, options = {}) => {
@@ -18,8 +19,8 @@ module.exports = (config = {}, options = {}) => {
         presets,
         ...options.babel,
       }),
-      require('../loaders/eslint.loader')(options.lint),
-    ],
+      options.disableLint ? null : require('../loaders/eslint.loader')(options.lint),
+    ].filter(Boolean),
     ...config,
   };
 };

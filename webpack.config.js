@@ -10,6 +10,8 @@ const src = require('./webpack/config/src')(__dirname);
 const options = require('./webpack/config/options')();
 const plugins = require('./webpack/config/plugins')(__dirname);
 
+const jsPreset = `./webpack/presets/${rules.jsx ? 'jsx' : 'es6'}.preset`;
+
 module.exports = {
   resolve: {
     extensions: ['.js', '.json', '.jsx', '.css', '.scss'],
@@ -47,9 +49,7 @@ module.exports = {
       // pug
       require('./webpack/presets/pug.preset')(src.pug, options.pug),
       // js
-      rules.jsx
-        ? require('./webpack/presets/jsx.preset')(src.js, options.js)
-        : require('./webpack/presets/es6.preset')(src.js, options.js),
+      require(jsPreset)(src.js, { ...options.js, disableLint: !rules.lintJs }),
       // img
       require('./webpack/presets/img.preset')(src.img, options.img),
       // static
@@ -67,7 +67,7 @@ module.exports = {
       PRODUCTION: PRODUCTION,
     }),
     require('./webpack/plugins/clean.plugin')(plugins.clean),
-    PRODUCTION
+    PRODUCTION && rules.lintCSS
       ? require('./webpack/plugins/stylelint.plugin')(plugins.styleLint)
       : null,
     PRODUCTION

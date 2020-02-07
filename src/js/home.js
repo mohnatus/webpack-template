@@ -12,4 +12,4 @@ import(
   './modules/module2'
 ).then(({ default: mod }) => {
   mod.hello('hello');
-})
+});
