@@ -18,7 +18,7 @@ module.exports = () => {
     img: {
       url: {
         // url-loader
-        outputPath: `${PATHS.dist.img}/`,
+        outputPath: PATHS.dist.img,
         filename: '[name].[ext]',
       },
     },
@@ -41,7 +41,7 @@ module.exports = () => {
       },
       extract: {
         // mini-css-extract-loader
-        publicPath: `${PATHS.public}/`
+        publicPath: PATHS.public
       },
       css: {
         // css-loader
@@ -65,7 +65,8 @@ module.exports = () => {
       file: {
         // file-loader
         name: '[name].[ext]',
-        outputPath: `${PATHS.dist.fonts}/`
+        outputPath: PATHS.dist.fonts,
+        publicPath: PATHS.public
       }
     }
   };
