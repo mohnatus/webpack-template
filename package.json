@@ -18,7 +18,7 @@
     "stylelint": "stylelint src/**/*.scss --output-file stylelint.log --syntax scss",
     "stylelint:fix": "stylelint src/**/*.scss --output-file stylelint.log --syntax scss --fix",
     "lint": "npm run eslint && npm run stylelint",
-    "lint:fix": "npm run eslint:fix",
+    "lint:fix": "npm run eslint:fix && npm run stylelint:fix",
     "env:prod": "cross-env NODE_ENV=production",
     "env:dev": "cross-env NODE_ENV=development",
     "stats": "webpack --profile --json > stats.json",
