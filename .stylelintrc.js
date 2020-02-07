@@ -11,6 +11,7 @@
  */
 
 module.exports = {
+  "ignoreFiles": ["**/*.js"],
   rules: {
     indentation: 2,
     'length-zero-no-unit': true,
