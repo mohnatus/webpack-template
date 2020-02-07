@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import Header from '~/js/components/header';
 
 if (true) {
-  console.log(2)
+  console.log(2);
 
 }
 else {
-  console.log("22")
+  console.log('22');
+
 
 }
 
