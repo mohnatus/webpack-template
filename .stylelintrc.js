@@ -34,7 +34,6 @@ module.exports = {
 
     // unknown
     'no-unknown-animations': true,
-    'at-rule-no-unknown': true,
     'media-feature-name-no-unknown': true,
     'selector-pseudo-class-no-unknown': true,
     'selector-pseudo-element-no-unknown': true,
@@ -42,13 +41,10 @@ module.exports = {
     'unit-no-unknown': true,
 
     // @at rules
-    'at-rule-empty-line-before': 'always',
     'at-rule-name-space-after': 'always',
     'at-rule-property-requirelist': {
       'font-face': ['font-display', 'font-family', 'font-style'],
     },
-    'at-rule-semicolon-newline-after': 'always',
-    'at-rule-semicolon-space-before': 'never',
     'keyframe-declaration-no-important': true,
     'media-feature-colon-space-after': 'always',
     'media-feature-colon-space-before': 'never',
@@ -85,7 +81,6 @@ module.exports = {
     'declaration-block-semicolon-newline-before': 'never-multi-line',
     'declaration-block-semicolon-space-before': 'never',
     'declaration-block-trailing-semicolon': 'always',
-    'declaration-colon-newline-after': 'always-multi-line',
     'declaration-colon-space-after': 'always',
     'declaration-colon-space-before': 'never',
     'declaration-no-important': true,
@@ -117,8 +112,6 @@ module.exports = {
     'selector-attribute-operator-space-before': 'never',
     'selector-attribute-quotes': 'always',
     'selector-combinator-space-after': 'always',
-    'selector-list-comma-space-after': 'always-single-line',
-    'selector-list-comma-space-after': 'never',
     'selector-max-empty-lines': 0,
     'selector-pseudo-class-case': 'lower',
     'selector-pseudo-class-parentheses-space-inside': 'never',
@@ -185,6 +178,8 @@ module.exports = {
     // https://github.com/hudochenkov/stylelint-order/blob/master/rules/properties-order/README.md
     'order/properties-order': [
       [
+        'content',
+
         {
           groupName: 'position',
           properties: ['position', 'top', 'bottom', 'left', 'right', 'z-index'],
@@ -199,7 +194,7 @@ module.exports = {
 
         {
           groupName: 'dimensions',
-          properties: ['height', 'width'],
+          properties: ['width', 'height'],
         },
 
         {
@@ -233,6 +228,7 @@ module.exports = {
             'background-size',
             'background-position',
             'background-repeat',
+            'background-attachment'
           ],
         },
 

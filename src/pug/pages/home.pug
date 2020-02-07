@@ -5,7 +5,10 @@ block variables
     var title = 'HOME PAGE'
 
 block content
-  div HOME PAGE
+  div #{test}
+  div
+    img(src=require('../../assets/img/bears.png').default width="300")
+  div.img
   +item({title: 'item 1', text: 'item 1 text'})
   +item({title: 'item 2', text: 'item 2 text'})
   +item({title: 'item 3', text: 'item 3 text'})

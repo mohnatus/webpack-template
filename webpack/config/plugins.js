@@ -23,14 +23,7 @@ module.exports = root => {
 
 		copy: {
 			patterns: [
-				{
-					from: path.resolve(root, PATHS.src.root, PATHS.src.img),
-					to: path.resolve(root, PATHS.dist.root, PATHS.dist.img)
-				},
-				{
-					from: path.resolve(root, PATHS.src.root, PATHS.src.fonts),
-					to: path.resolve(root, PATHS.dist.root, PATHS.dist.fonts)
-				}
+
 			],
 			options: {}
 		},

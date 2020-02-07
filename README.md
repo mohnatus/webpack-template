@@ -51,6 +51,9 @@ npm i -D clean-webpack-plugin copy-webpack-plugin cross-env webpack webpack-bund
 
 ## Стили
 
+development: SCSS -> вставка в тег style
+production: SCSS -> PostCSS -> извлечение
+
 ### Лоадеры
 
 - `sass-loader` - Компиляция SCSS в CSS
@@ -83,6 +86,8 @@ npm i -D autoprefixer css-loader css-mqpacker cssnano mini-css-extract-plugin no
 
 ## HTML
 
+pug -> html
+
 ### Лоадеры
 
 - `pug-loader` - компиляция Pug в HTML
@@ -104,6 +109,7 @@ npm i -D html-webpack-plugin pug pug-loader
 
 ## JavaScript
 
+es6/jsx -> js
 
 ### Лоадеры
 

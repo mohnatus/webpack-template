@@ -9,5 +9,5 @@ module.exports = (config = {}) => {
       },
     ],
     config.jsx ? '@babel/preset-react' : null,
-  ].filter((p) => p);
+  ].filter(Boolean);
 };

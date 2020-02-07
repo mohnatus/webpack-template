@@ -1,5 +1,10 @@
-doctype html
-html
- head
- body
-  h1 about
+extends ../layout/main.pug
+
+block variables
+  -
+    var title = 'ABOUT PAGE'
+
+block content
+  +item({title: 'item 1', text: 'item 1 text'})
+  +item({title: 'item 2', text: 'item 2 text'})
+  +item({title: 'item 3', text: 'item 3 text'})

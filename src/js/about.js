@@ -1,7 +1,6 @@
-import _ from 'lodash';
-import obj from '../modules/module2';
-obj.hello('about page')
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Header from '~/js/components/header';
 
-console.log(_.indexOf([1,2,3,2], [2]))
 
-console.log('about pageeeeeee')
+ReactDOM.render(<Header page="ABOUT PAGE" />, document.getElementById('header'));

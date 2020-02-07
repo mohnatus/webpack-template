@@ -1,0 +1,42 @@
+.btn {
+  /* переопределение стилей для ссылок */
+  display: inline-block;
+
+  /* небольшие вертикальные отступы */
+  margin: 2px 0;
+
+  /* для установки размеров используем паддинги */
+  padding: 0.5em 1em;
+  background-color: #9555af;
+
+  /* контрастные цвета */
+  color: #ffffff;
+  font: inherit;
+  cursor: pointer;
+
+  /* сброс браузерных стилей для фокуса */
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+
+  /* невидимая рамка */
+  border: solid 1px transparent;
+  border-radius: 4px;
+}
+
+.btn:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: white;
+  color: #9555af;
+  border-color: currentColor;
+}
+
+/* сброс браузерных стилей для фокуса */
+.btn::-moz-focus-inner {
+  border: none;
+}

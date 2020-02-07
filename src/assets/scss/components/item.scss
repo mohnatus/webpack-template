@@ -1,0 +1,20 @@
+.item {
+  position: relative;
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+
+  &:before {
+    @include size(40px);
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: url('../img/lol.gif') center / contain no-repeat;
+  }
+
+  h2 {
+    font-family: 'PT Astra Sans', serif;
+  }
+}

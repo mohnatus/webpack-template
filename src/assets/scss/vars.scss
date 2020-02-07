@@ -1,0 +1,13 @@
+$color: #00ff00;
+$blue: #e2e3e4;
+
+@mixin size($w, $h: -1) {
+  width: $w;
+
+  @if ($h < 0) {
+    height: $w;
+  }
+  @else {
+    height: $h;
+  }
+}

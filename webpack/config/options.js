@@ -18,7 +18,7 @@ module.exports = () => {
     img: {
       url: {
         // url-loader
-        outputPath: 'media',
+        outputPath: `${PATHS.dist.img}/`,
         filename: '[name].[ext]',
       },
     },

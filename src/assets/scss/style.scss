@@ -1,13 +1,7 @@
-$color: #00ff00;
-$blue: #e2e3e4;
-
-body {
-  background-color: $blue;
-  background-image: url('./img/lol.gif'), url('./img/bears.png'),
-    url('./img/in-progress.png');
-  background-repeat: no-repeat;
-  color: $color;
-}
+@import 'vars.scss';
+@import 'utils/fonts.scss';
+@import 'components/button.scss';
+@import 'components/item.scss';
 
 input::placeholder {
   color: $color;
@@ -18,4 +12,9 @@ input::placeholder {
   left: 20px;
   color: $color;
   border: 1px solid $color;
+}
+
+.img {
+  @include size(300px, 180px);
+  background: url('../img/bears.png');
 }
