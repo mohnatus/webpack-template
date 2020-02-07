@@ -14,9 +14,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint src/js/**",
+    "eslint:fix": "eslint src/js/** --fix",
     "stylelint": "stylelint src/**/*.scss --output-file stylelint.log --syntax scss",
-    "eslint:fix": "npm run eslint --fix",
-    "stylelint:fix": "npm run stylelint --fix",
+    "stylelint:fix": "stylelint src/**/*.scss --output-file stylelint.log --syntax scss --fix",
     "lint": "npm run eslint && npm run stylelint",
     "lint:fix": "npm run eslint:fix && npm run stylelint:fix",
     "env:prod": "cross-env NODE_ENV=production",
