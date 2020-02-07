@@ -4,6 +4,7 @@ import Header from '~/js/components/header';
 
 if (true) {
   console.log(2)
+
 }
 else {
   console.log("22")

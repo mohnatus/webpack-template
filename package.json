@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "eslint src/js/**",
+    "eslint": "eslint src/js/** --fix",
     "stylelint": "stylelint src/**/*.scss --output-file stylelint.log --fix --syntax scss",
     "lint": "npm run eslint && npm run stylelint",
     "env:prod": "cross-env NODE_ENV=production",
@@ -54,6 +54,7 @@
     "eslint-loader": "^3.0.3",
     "file-loader": "^5.0.2",
     "html-webpack-plugin": "^4.0.0-beta.11",
+    "husky": "^4.2.1",
     "imagemin-webpack-plugin": "^2.4.2",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
