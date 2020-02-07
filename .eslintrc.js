@@ -32,7 +32,13 @@ module.exports = {
     "promise"
   ],
 
-  extends: "eslint:recommended",
+  extends: [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:jsx-a11y/recommended",
+    "plugin:promise/recommended"
+  ],
 
   rules: {
     // best practices
