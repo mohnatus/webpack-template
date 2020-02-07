@@ -29,11 +29,12 @@
  */
 
 const path = require('path');
+const PATHS = require('./paths');
 
 module.exports = (root) => {
   return {
-    publicPath:  process.env.NODE_ENV === 'production' ? './' : '/',
-    path: path.resolve(root, 'dist'),
+    publicPath:  process.env.NODE_ENV === 'production' ? PATHS.public : '/',
+    path: path.resolve(root, PATHS.dist.root),
     filename: '[name].js',
 
   };

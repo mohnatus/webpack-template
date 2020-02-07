@@ -17,6 +17,13 @@ module.exports = () => ({
   },
 
   splitChunks: {
-    chunks: 'all',
+    cacheGroups: {
+        vendor: {
+          name: 'vendors',
+          test: /[\\/]node_modules[\\/]/,
+          chunks: 'all',
+          enforce: true
+        }
+      }
   },
 });

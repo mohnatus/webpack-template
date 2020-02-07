@@ -3,6 +3,8 @@ const path = require('path');
 const mode = process.env.NODE_ENV || 'development';
 const PRODUCTION = mode === 'production';
 
+const PATHS = require('./webpack/config/paths');
+
 const rules = require('./webpack/config/rules')();
 const src = require('./webpack/config/src')(__dirname);
 const options = require('./webpack/config/options')();
@@ -11,6 +13,10 @@ const plugins = require('./webpack/config/plugins')(__dirname);
 module.exports = {
   resolve: {
     extensions: ['.js', '.json', '.jsx', '.css', '.scss'],
+    alias: {
+      '~': path.resolve(__dirname, PATHS.src.root),
+      Assets: path.resolve(__dirname, PATHS.src.root, PATHS.src.assets)
+    }
   },
 
   mode,
@@ -20,8 +26,8 @@ module.exports = {
   output: require('./webpack/config/output')(__dirname),
 
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
-    port: 9000,
+    contentBase: path.resolve(__dirname, PATHS.dist.root),
+    port: rules.port || 9000,
   },
 
   optimization: PRODUCTION ? require('./webpack/config/optimization')() : {},
@@ -46,10 +52,12 @@ module.exports = {
         : require('./webpack/presets/es6.preset')(src.js, options.js),
       // img
       require('./webpack/presets/img.preset')(src.img, options.img),
-      // txt
+      // static
       require('./webpack/presets/txt.preset')(src.txt, options.txt),
       // svg
       require('./webpack/presets/svg.preset')(src.svg, options.svg),
+      // fonts
+      require('./webpack/presets/fonts.preset')(src.fonts, options.fonts),
     ],
   },
 

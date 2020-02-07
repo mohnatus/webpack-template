@@ -1,5 +1,5 @@
 /**
- * Text loaders preset
+ * Txt loaders preset
  *
  * Use:
  *

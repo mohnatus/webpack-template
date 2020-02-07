@@ -19,7 +19,7 @@ module.exports = {
     'no-duplicate-selectors': true,
     'no-empty-first-line': true,
     'no-eol-whitespace': true,
-    'no-extra-semicolon': true,
+    'no-extra-semicolons': true,
     'string-no-newline': true,
     'string-quotes': 'single',
 
@@ -63,17 +63,12 @@ module.exports = {
     'block-closing-brace-empty-line-before': 'never',
     'block-closing-brace-newline-after': 'always',
     'block-closing-brace-newline-before': 'always',
-    'block-closing-brace-space-after': 'never',
-    'block-closing-brace-space-before': 'never',
     'block-no-empty': true,
     'block-opening-brace-newline-after': 'always',
-    'block-opening-brace-newline-before': 'never',
-    'block-opening-brace-space-after': 'never',
     'block-opening-brace-space-before': 'always',
 
     // colors
     'color-hex-length': 'long',
-    'color-named': 'always-where-possible',
     'color-no-invalid-hex': true,
 
     // comments
@@ -118,8 +113,8 @@ module.exports = {
 
     // selectors
     'selector-attribute-brackets-space-inside': 'never',
-    'selector-attribute-brackets-space-after': 'never',
-    'selector-attribute-brackets-space-before': 'never',
+    'selector-attribute-operator-space-after': 'never',
+    'selector-attribute-operator-space-before': 'never',
     'selector-attribute-quotes': 'always',
     'selector-combinator-space-after': 'always',
     'selector-list-comma-space-after': 'always-single-line',
@@ -128,7 +123,7 @@ module.exports = {
     'selector-pseudo-class-case': 'lower',
     'selector-pseudo-class-parentheses-space-inside': 'never',
     'selector-pseudo-element-case': 'lower',
-    'selector-pseudo-element-color-notation': 'single',
+    'selector-pseudo-element-colon-notation': 'single',
 
     // value
     'value-list-comma-space-after': 'always-single-line',

@@ -1,3 +1,9 @@
+/**
+ * Loaders options
+ */
+
+const PATHS = require('./paths');
+
 module.exports = () => {
   return {
     js: {
@@ -52,5 +58,14 @@ module.exports = () => {
         // raw-loader
       },
     },
+
+    fonts: {
+
+      file: {
+        // file-loader
+        name: '[name].[ext]',
+        outputPath: `${PATHS.dist.fonts}/`
+      }
+    }
   };
 };

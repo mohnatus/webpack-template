@@ -1,58 +1,64 @@
+/**
+ * Plugins configs
+ */
+
 const path = require('path');
 
-module.exports = (root) => {
-  return {
-    clean: {
-      options: {},
-    },
-    styleLint: {
-      options: {},
-    },
-    cssExtract: {
-      options: {},
-    },
-    imgMin: {
-      options: {},
-    },
-    copy: {
-      patterns: [
-        {
-          from: path.resolve(root, 'src', 'assets'),
-          to: path.resolve(root, 'dist', 'assets'),
-        },
-      ],
-      options: {},
-    },
-    html: [
-      {
-        options: {
-          template: path.resolve(root, 'src', 'index.pug'),
-          chunks: ['home'],
-          filename: 'home.html',
-        },
-      },
-      {
-        options: {
-          template: path.resolve(root, 'src', 'about.pug'),
-          chunks: ['about'],
-          filename: 'about.html',
-        },
-      },
-      {
-        options: {
-          template: path.resolve(root, 'src', 'index.twig'),
-          filename: 'twig.html',
-        },
-      },
-    ],
-    chunks: {
-      options: {
-        outputPath: path.resolve(root, `./assets`),
-        fileExtension: '.twig',
-        templateScript: `<script src="{{chunk}}"></script>`,
-        templateStyle: `<link rel="stylesheet" href="{{chunk}}" />`,
-        generateChunksManifest: true
-      }
-    }
-  };
+const PATHS = require('./paths');
+
+module.exports = root => {
+	return {
+		clean: {
+			options: {}
+		},
+		styleLint: {
+			options: {}
+		},
+		cssExtract: {
+			options: {}
+		},
+		imgMin: {
+			options: {}
+		},
+
+		copy: {
+			patterns: [
+				{
+					from: path.resolve(root, PATHS.src.root, PATHS.src.img),
+					to: path.resolve(root, PATHS.dist.root, PATHS.dist.img)
+				},
+				{
+					from: path.resolve(root, PATHS.src.root, PATHS.src.fonts),
+					to: path.resolve(root, PATHS.dist.root, PATHS.dist.fonts)
+				}
+			],
+			options: {}
+		},
+
+		html: PATHS.entries.map(entry => {
+			return {
+				options: {
+					template: path.resolve(
+						root,
+						PATHS.src.root,
+						PATHS.src.pages,
+						`${entry}.pug`
+					),
+					chunks: [entry],
+					filename: `${entry}.html`,
+					inject: true
+				}
+			};
+		}),
+
+		chunks: {
+			options: {
+				outputPath: path.resolve(root, `./assets`),
+				fileExtension: '.twig',
+				templateScript: `<script src="{{chunk}}"></script>`,
+				templateStyle: `<link rel="stylesheet" href="{{chunk}}" />`,
+				generateChunksManifest: true
+			}
+		}
+	};
 };
