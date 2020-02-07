@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /**
  * Stylelint configuration
  * https://stylelint.io/
@@ -6,12 +8,9 @@
  *
  * stylelint-order
  * https://github.com/hudochenkov/stylelint-order
- *
- * TODO Stylelint rules
  */
 
 module.exports = {
-  "ignoreFiles": ["**/*.js"],
   rules: {
     indentation: 2,
     'length-zero-no-unit': true,
