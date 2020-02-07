@@ -23,6 +23,6 @@ module.exports = {
     js: '.'
   },
 
-  public: './'
+  public: 'https://cat-in-web.ru/'
 
 };

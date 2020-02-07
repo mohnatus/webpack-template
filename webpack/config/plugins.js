@@ -15,7 +15,10 @@ module.exports = root => {
 			options: {}
 		},
 		cssExtract: {
-			options: {}
+			options: {
+				filename: '[name].css',
+				chunkFileName: '[name].css',
+			}
 		},
 		imgMin: {
 			options: {}
@@ -46,8 +49,8 @@ module.exports = root => {
 
 		chunks: {
 			options: {
-				outputPath: path.resolve(root, `./assets`),
-				fileExtension: '.twig',
+				outputPath: path.resolve(root, `./chunks`),
+				fileExtension: '.html',
 				templateScript: `<script src="{{chunk}}"></script>`,
 				templateStyle: `<link rel="stylesheet" href="{{chunk}}" />`,
 				generateChunksManifest: true

@@ -62,9 +62,10 @@ module.exports = {
   },
 
   plugins: [
-    // require('./webpack/plugins/define.plugin')({
-    //   'process.env.NODE_ENV': JSON.stringify(mode === 'production'),
-    // }),
+    require('./webpack/plugins/define.plugin')({
+      'process.env.NODE_ENV': JSON.stringify(mode),
+      PRODUCTION: PRODUCTION,
+    }),
     require('./webpack/plugins/clean.plugin')(plugins.clean),
     PRODUCTION
       ? require('./webpack/plugins/stylelint.plugin')(plugins.styleLint)
@@ -79,6 +80,6 @@ module.exports = {
     ...plugins.html.map((options) => {
       return require('./webpack/plugins/html.plugin')(options);
     }),
-    //require('./webpack/plugins/chunks.plugin')(plugins.chunks),
+    require('./webpack/plugins/chunks.plugin')(plugins.chunks),
   ].filter(Boolean),
 };

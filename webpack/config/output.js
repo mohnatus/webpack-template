@@ -35,7 +35,7 @@ module.exports = (root) => {
   return {
     publicPath:  process.env.NODE_ENV === 'production' ? PATHS.public : '/',
     path: path.resolve(root, PATHS.dist.root),
-    filename: '[name].js',
-
+    filename: '[name].[contenthash].js',
+    chunkFilename: '[name].[contenthash].js',
   };
 };

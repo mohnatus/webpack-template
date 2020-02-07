@@ -41,6 +41,7 @@ module.exports = () => {
       },
       extract: {
         // mini-css-extract-loader
+        publicPath: `${PATHS.public}/`
       },
       css: {
         // css-loader
