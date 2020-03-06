@@ -41,7 +41,7 @@ module.exports = {
     return entry;
   })(),
   output: {
-    publicPath: PRODUCTION ? PATHS.public : '/',
+    publicPath: PATHS.public,
     path: path.resolve(__dirname, PATHS.dist),
     filename: PRODUCTION ? '[name].[contenthash].js' : '[name].js',
     chunkFilename: PRODUCTION ? '[name].[contenthash].js' : '[name].js',
