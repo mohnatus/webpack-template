@@ -37,6 +37,7 @@ module.exports = {
       jsx: true // enable JSX
     }
   },
+
   plugins: [
     "babel",
     "import",

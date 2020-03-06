@@ -34,14 +34,8 @@ npm run analyze
   - `/loaders` - лоадеры
   - `/presets` - пресеты лоадеров
   - `/plugins` - плагины
-  - `/babel` - конфигурация babel
   - `/config`
-    - `/entries.js` - поле `entry`
-    - `/output.js` - поле `output`
-    - `/rules.js` - общие настройки конфига
-    - `/plugins.js` - конфигурация плагинов
-    - `/options.js` - опции лоадеров
-    - `/src.js` - конфигурация пресетов
+    - `/optimization.js` - настройки оптимизации
 
 ## Пакеты
 
@@ -130,7 +124,6 @@ npm i @babel/runtime
 
 ### Конфигурация
 
-- `.eslintrc` - ESLint
 - `babel.config.js` - Babel
 
 ## React
