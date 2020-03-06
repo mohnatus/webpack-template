@@ -6,6 +6,6 @@
 module.exports = (options = {}) => {
   return {
     loader: 'pug-loader',
-    options,
+    options
   };
 };

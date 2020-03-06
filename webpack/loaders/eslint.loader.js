@@ -10,7 +10,7 @@ module.exports = (options = {}) => {
       fix: true,
       emitError: true,
       emitWarning: true,
-      ...options,
+      ...options
     },
   };
 };

@@ -27,6 +27,6 @@
 module.exports = (options = {}) => {
   return {
     loader: 'sass-loader',
-    options,
+    options
   };
 };

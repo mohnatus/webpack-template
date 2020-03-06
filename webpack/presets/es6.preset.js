@@ -7,21 +7,13 @@
  * eslint-loader
  */
 
-module.exports = (config = {}, options = {}) => {
-  const plugins = require('../babel/plugins')();
-  const presets = require('../babel/presets')();
-
+module.exports = (PRODUCTION) => {
   return {
     test: /\.m?js$/,
     exclude: /(node_modules|bower_components)/,
     use: [
-      require('../loaders/babel.loader')({
-        plugins,
-        presets,
-        ...options.babel,
-      }),
-      options.disableLint ? null : require('../loaders/eslint.loader')(options.lint),
-    ].filter(Boolean),
-    ...config,
+      require('../loaders/babel.loader')(),
+      // PRODUCTION ? require('../loaders/eslint.loader')() : null,
+    ].filter(Boolean)
   };
 };

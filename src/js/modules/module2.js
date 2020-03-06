@@ -1,3 +1,5 @@
 export default {
-  hello: (str) => console.log(str)
+  hello: (str) => {
+    return console.log(str);
+  },
 };

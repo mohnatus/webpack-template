@@ -7,10 +7,9 @@
  * Imports files as a String
  */
 
-module.exports = (config = {}, options = {}) => {
+module.exports = (PRODUCTION) => {
   return {
     test: /\.txt$/i,
-    use: [require('../loaders/raw.loader')(options.raw)],
-    ...config,
+    use: [require('../loaders/raw.loader')()]
   };
 };

@@ -13,17 +13,15 @@
  * Inject CSS into the DOM
  */
 
-module.exports = (config = {}, options = {}) => {
+module.exports = (PRODUCTION) => {
   return {
     test: /\.s?css$/,
     use: [
-      require('../loaders/style.loader')(options.style),
+      require('../loaders/style.loader')(),
       require('../loaders/css.loader')({
-        importLoaders: 1,
-        ...options.css,
+        importLoaders: 1
       }),
-      require('../loaders/sass.loader')(options.scss),
-    ],
-    ...config,
+      require('../loaders/sass.loader')(),
+    ]
   };
 };

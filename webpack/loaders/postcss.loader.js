@@ -31,6 +31,6 @@
 module.exports = (options = {}) => {
   return {
     loader: 'postcss-loader',
-    options,
+    options
   };
 };

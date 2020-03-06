@@ -26,5 +26,5 @@
 
 module.exports = (options = {}) => ({
   loader: 'style-loader',
-  options,
+  options
 });

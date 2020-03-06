@@ -7,6 +7,6 @@
 
 const { DefinePlugin } = require('webpack');
 
-module.exports = (definitions) => {
+module.exports = (definitions = {}) => {
   return new DefinePlugin(definitions);
 };

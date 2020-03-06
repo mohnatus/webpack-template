@@ -1,85 +1,138 @@
+/* eslint-disable */
+
 const path = require('path');
 
 const mode = process.env.NODE_ENV || 'development';
 const PRODUCTION = mode === 'production';
 
-const PATHS = require('./webpack/config/paths');
-
-const rules = require('./webpack/config/rules')();
-const src = require('./webpack/config/src')(__dirname);
-const options = require('./webpack/config/options')();
-const plugins = require('./webpack/config/plugins')(__dirname);
-
-const jsPreset = `./webpack/presets/${rules.jsx ? 'jsx' : 'es6'}.preset`;
+const PATHS = require('./webpack.paths');
+const publicPath = PATHS.public || '';
 
 module.exports = {
+  devServer: {
+    contentBase: path.resolve(__dirname, PATHS.dist),
+    port: 9000,
+  },
+
   resolve: {
-    extensions: ['.js', '.json', '.jsx', '.css', '.scss'],
-    alias: {
-      '~': path.resolve(__dirname, PATHS.src.root),
-      Assets: path.resolve(__dirname, PATHS.src.root, PATHS.src.assets)
-    }
+    extensions: [
+      '.js',
+      '.json',
+      '.jsx',
+      '.css',
+      '.scss',
+      ...PATHS.extensions,
+    ],
+    alias: (() => {
+      const aliases = {};
+      if (PATHS.alias) {
+        Object.keys(PATHS.alias)
+          .forEach((key) => {
+            aliases[ key ] = path.resolve(__dirname, PATHS.alias[ key ]);
+          });
+      }
+
+      return aliases;
+    })(),
   },
 
   mode,
   devtool: PRODUCTION ? 'source-map' : 'inline-source-map',
 
-  entry: require('./webpack/config/entries')(__dirname),
-  output: require('./webpack/config/output')(__dirname),
-
-  devServer: {
-    contentBase: path.resolve(__dirname, PATHS.dist.root),
-    port: rules.port || 9000,
+  entry: (() => {
+    const entry = {};
+    Object.keys(PATHS.entry).forEach((key) => {
+      entry[ key ] = './' + PATHS.entry[ key ];
+    });
+    return entry;
+  })(),
+  output: {
+    publicPath: PRODUCTION ? PATHS.public : '/',
+    path: path.resolve(__dirname, PATHS.dist),
+    filename: '[name].[contenthash].js',
+    chunkFilename: '[name].[contenthash].js',
   },
-
-  optimization: PRODUCTION ? require('./webpack/config/optimization')() : {},
 
   module: {
     rules: [
-      // scss
+      /* SCSS */
       PRODUCTION
         ? require('./webpack/presets/scss.preset.production')(
-            src.css,
-            options.css,
-          )
+          PRODUCTION,
+          { publicPath, }
+        )
         : require('./webpack/presets/scss.preset.development')(
-            src.css,
-            options.css,
-          ),
-      // pug
-      require('./webpack/presets/pug.preset')(src.pug, options.pug),
-      // js
-      require(jsPreset)(src.js, { ...options.js, disableLint: !rules.lintJs }),
-      // img
-      require('./webpack/presets/img.preset')(src.img, options.img),
-      // static
-      require('./webpack/presets/txt.preset')(src.txt, options.txt),
-      // svg
-      require('./webpack/presets/svg.preset')(src.svg, options.svg),
-      // fonts
-      require('./webpack/presets/fonts.preset')(src.fonts, options.fonts),
+          PRODUCTION,
+          { publicPath, }
+        ),
+
+      /* PUG */
+      require('./webpack/presets/pug.preset')(PRODUCTION),
+
+      /* JS */
+      require('./webpack/presets/jsx.preset')(),
+      // require('./webpack/presets/es6.preset')(PRODUCTION),
+
+      /* IMAGES */
+      require('./webpack/presets/img.preset')(
+        PRODUCTION,
+        { outputPath: PATHS.output.images, }
+      ),
+
+      /* TXT */
+      require('./webpack/presets/txt.preset')(PRODUCTION),
+
+      /* FONTS */
+      require('./webpack/presets/fonts.preset')(PRODUCTION, {
+        outputPath: PATHS.output.fonts,
+        publicPath,
+      }),
     ],
   },
 
   plugins: [
-    require('./webpack/plugins/define.plugin')({
-      'process.env.NODE_ENV': JSON.stringify(mode),
-      PRODUCTION: PRODUCTION,
-    }),
-    require('./webpack/plugins/clean.plugin')(plugins.clean),
-    PRODUCTION && rules.lintCSS
-      ? require('./webpack/plugins/stylelint.plugin')(plugins.styleLint)
-      : null,
+    /* CLEAN FOLDERS */
     PRODUCTION
-      ? require('./webpack/plugins/css.extract.plugin')(plugins.cssExtract)
+      ? require('./webpack/plugins/clean.plugin')()
       : null,
+
+    /* LINT CSS */
     PRODUCTION
-      ? require('./webpack/plugins/img.min.plugin')(plugins.imgMin)
+      ? require('./webpack/plugins/stylelint.plugin')()
       : null,
-    require('./webpack/plugins/copy.plugin')(plugins.copy),
-    ...plugins.html.map((options) => {
-      return require('./webpack/plugins/html.plugin')(options);
+
+    /* EXTRACT CSS */
+    PRODUCTION
+      ? require('./webpack/plugins/css.extract.plugin')()
+      : null,
+
+    /* MINIFY IMAGES */
+    PRODUCTION
+      ? require('./webpack/plugins/img.min.plugin')()
+      : null,
+
+    /* COPY FILES */
+    require('./webpack/plugins/copy.plugin')(),
+
+    /* GENERATE HTML FILES */
+    ...Object.keys(PATHS.html).map((entry) => {
+      return require('./webpack/plugins/html.plugin')({
+        template: path.resolve(__dirname, PATHS.html[ entry ]),
+        chunks: [ entry, ],
+        filename: `${entry}.2.html`,
+        inject: true,
+      });
     }),
-    require('./webpack/plugins/chunks.plugin')(plugins.chunks),
+
+    /* CREATE CHUNKS LIST FILES */
+    require('./webpack/plugins/chunks.plugin')({
+      outputPath: path.resolve(__dirname, PATHS.output.chunks),
+      fileExtension: '.html',
+    }),
+
   ].filter(Boolean),
+
+
+  optimization: require('./webpack/config/optimization')(PRODUCTION),
 };
+/* eslint-disable */

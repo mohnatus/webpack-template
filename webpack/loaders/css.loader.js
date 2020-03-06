@@ -34,6 +34,6 @@
 module.exports = (options = {}) => {
   return {
     loader: 'css-loader',
-    options,
+    options
   };
 };

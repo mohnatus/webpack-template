@@ -27,10 +27,9 @@
  */
 const StylelintPlugin = require('stylelint-webpack-plugin');
 
-module.exports = ({ options } = {}) => {
+module.exports = (options = {}) => {
   return new StylelintPlugin({
     fix: true,
-
     ...options
   });
 };

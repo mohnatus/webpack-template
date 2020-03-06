@@ -4,6 +4,11 @@
  */
 const ChunksWebpackPlugin = require('chunks-webpack-plugin');
 
-module.exports = ({ options }) => {
-  return new ChunksWebpackPlugin(options);
+module.exports = (options = {}) => {
+  return new ChunksWebpackPlugin({
+    templateScript: `<script src="{{chunk}}"></script>`,
+    templateStyle: `<link rel="stylesheet" href="{{chunk}}" />`,
+    generateChunksManifest: true,
+    ...options
+  });
 };

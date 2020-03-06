@@ -35,6 +35,6 @@
 module.exports = (options = {}) => {
   return {
     loader: 'file-loader',
-    options,
+    options
   };
 };

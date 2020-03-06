@@ -7,8 +7,11 @@ block variables
 block content
   div #{test}
   div
-    img(src=require('../../assets/img/bears.png').default width="300")
+    figure
+      img(src=require('../../assets/img/bears.png').default width="300")
+      figcaption Test html images
   div.img
+  h2 Test pug mixins
   +item({title: 'item 1', text: 'item 1 text'})
   +item({title: 'item 2', text: 'item 2 text'})
   +item({title: 'item 3', text: 'item 3 text'})

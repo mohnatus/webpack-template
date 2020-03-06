@@ -13,10 +13,10 @@
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = ({ options } = {}) => {
+module.exports = (options = {}) => {
   return new MiniCssExtractPlugin({
     filename: '[name].css',
     chunkFilename: '[name].css',
-    ...options,
+    ...options
   });
 };

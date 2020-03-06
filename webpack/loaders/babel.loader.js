@@ -11,6 +11,6 @@
 module.exports = (options = {}) => {
   return {
     loader: 'babel-loader',
-    options,
+    options
   };
 };

@@ -13,6 +13,6 @@
 module.exports = (options = {}) => {
   return {
     loader: 'raw-loader',
-    options,
+    options
   };
 };

@@ -11,19 +11,23 @@
  * Default is false: each entry chunk embeds runtime
  */
 
-module.exports = () => ({
-  runtimeChunk: {
-    name: 'webpack.runtime',
-  },
+module.exports = (PRODUCTION) => {
+  if (!PRODUCTION) return {};
 
-  splitChunks: {
-    cacheGroups: {
-        vendor: {
-          name: 'vendors',
-          test: /[\\/]node_modules[\\/]/,
-          chunks: 'all',
-          enforce: true
+  return {
+    runtimeChunk: {
+      name: 'webpack.runtime',
+    },
+
+    splitChunks: {
+      cacheGroups: {
+          vendor: {
+            name: 'vendors',
+            test: /[\\/]node_modules[\\/]/,
+            chunks: 'all',
+            enforce: true
+          }
         }
-      }
-  },
-});
+    },
+  }
+};

@@ -1,5 +1,18 @@
 /* eslint-disable */
+
 module.exports = {
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [
+          ['Assets', './src/assets'],
+          ['JS', './src/js'],
+        ],
+        extensions: ['.ts', '.js', '.jsx', '.json']
+      }
+    }
+  },
+
   /**
    * Environments script is designed to run in
    * Each environment brings with it a certain set of predefined global variables
@@ -7,7 +20,11 @@ module.exports = {
   env: {
     es6: true, // enable all ECMAScript 6 features except for modules
     browser: true, // browser global variables
-    node: true // Node.js global variables and Node.js scoping
+    node: { // Node.js global variables and Node.js scoping
+      'paths': [
+        __dirname,
+      ],
+    }
   },
 
   // A wrapper around the Babel parser that makes it compatible with ESLint
@@ -25,7 +42,7 @@ module.exports = {
     "import",
     "jsx-a11y",
 
-    "react", // React semantics
+    "react",
     "prettier",
 
     "no-loops",
@@ -37,26 +54,24 @@ module.exports = {
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:jsx-a11y/recommended",
-    "plugin:promise/recommended"
+    "plugin:promise/recommended",
+    "plugin:react/recommended"
   ],
 
   rules: {
     // best practices
     curly: ["error", "all"],
     "dot-location": ["error", "property"],
-    "dot-notation": ["warn", { allowKeywords: false }],
     eqeqeq: ["error", "always"],
     "guard-for-in": "error",
     "no-alert": "error",
     "no-caller": "error",
-    "no-case-declaration": "error",
     "no-constructor-return": "error",
     "no-else-return": "error",
     "no-eval": "error",
     "no-loop-func": "error",
     "no-magic-numbers": "error",
     "no-multi-spaces": "error",
-    "no-return-assing": "error",
     "no-return-await": "error",
     "no-unmodified-loop-condition": "error",
     "require-await": "error",
@@ -93,7 +108,6 @@ module.exports = {
     quotes: ["error", "single"],
     semi: ["error", "always"],
     "space-before-function-paren": ["error", "always"],
-    "space-in-parens": ["error", "always"],
 
     // ecmascript 6
     "arrow-body-style": ["error", "always"],
@@ -109,6 +123,7 @@ module.exports = {
         ignoreMemberSort: false,
         memberSyntaxSortOrder: ["none", "all", "multiple", "single"]
       }
-    ]
+    ],
   }
 };
+/* eslint-disable */
