@@ -15,20 +15,13 @@ module.exports = {
   },
 
   resolve: {
-    extensions: [
-      '.js',
-      '.json',
-      '.jsx',
-      '.css',
-      '.scss',
-      ...PATHS.extensions,
-    ],
+    extensions: ['.js', '.json', '.jsx', '.css', '.scss'],
     alias: (() => {
       const aliases = {};
       if (PATHS.alias) {
         Object.keys(PATHS.alias)
           .forEach((key) => {
-            aliases[ key ] = path.resolve(__dirname, PATHS.alias[ key ]);
+            aliases[key] = path.resolve(__dirname, PATHS.alias[key]);
           });
       }
 
@@ -42,7 +35,7 @@ module.exports = {
   entry: (() => {
     const entry = {};
     Object.keys(PATHS.entry).forEach((key) => {
-      entry[ key ] = './' + PATHS.entry[ key ];
+      entry[key] = './' + PATHS.entry[key];
     });
     return entry;
   })(),
@@ -117,8 +110,8 @@ module.exports = {
     /* GENERATE HTML FILES */
     ...Object.keys(PATHS.html).map((entry) => {
       return require('./webpack/plugins/html.plugin')({
-        template: path.resolve(__dirname, PATHS.html[ entry ]),
-        chunks: [ entry, ],
+        template: path.resolve(__dirname, PATHS.html[entry]),
+        chunks: [entry,],
         filename: `${entry}.2.html`,
         inject: true,
       });

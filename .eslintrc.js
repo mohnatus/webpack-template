@@ -1,13 +1,17 @@
 /* eslint-disable */
+const PATHS = require('./webpack.paths');
+const aliases = Object.keys(PATHS.alias).map(alias => {
+  return [
+    alias,
+    './' + PATHS.alias[alias]
+  ]
+});
 
 module.exports = {
   settings: {
     'import/resolver': {
       alias: {
-        map: [
-          ['Assets', './src/assets'],
-          ['JS', './src/js'],
-        ],
+        map: aliases,
         extensions: ['.ts', '.js', '.jsx', '.json']
       }
     }
