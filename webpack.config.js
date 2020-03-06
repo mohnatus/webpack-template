@@ -11,7 +11,8 @@ const publicPath = PATHS.public || '';
 module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, PATHS.dist),
-    port: 9000,
+    port: 1234,
+    hot: true
   },
 
   resolve: {
@@ -42,8 +43,8 @@ module.exports = {
   output: {
     publicPath: PRODUCTION ? PATHS.public : '/',
     path: path.resolve(__dirname, PATHS.dist),
-    filename: '[name].[contenthash].js',
-    chunkFilename: '[name].[contenthash].js',
+    filename: PRODUCTION ? '[name].[contenthash].js' : '[name].js',
+    chunkFilename: PRODUCTION ? '[name].[contenthash].js' : '[name].js',
   },
 
   module: {
@@ -112,7 +113,7 @@ module.exports = {
       return require('./webpack/plugins/html.plugin')({
         template: path.resolve(__dirname, PATHS.html[entry]),
         chunks: [entry,],
-        filename: `${entry}.2.html`,
+        filename: `${entry}.html`,
         inject: true,
       });
     }),
